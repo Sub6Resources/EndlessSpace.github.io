@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>New Horizons </title>
+<style>
+body {
+background-color:black;
+color:white;
+margin:0;
+padding:0;
+}
+h1 {
+background-color:#333;
+height:50px;
+}
+a {
+color:white;
+font-size:18px;
+}
+a:hover {
+color:#eee;
+}
+</style>
+</head>
+<body>
+<h1><a href="/EndlessSpace">&lt;--back</a> New Horizons </h1>
+<!--
+<iframe width="300px" height="300px" src="http://pluto.jhuapl.edu/#sinceFlyby" scrolling="no">Loading </iframe>
+-->
+Current New Horizons Position Computer-Generated Hourly by <a href="http://pluto.jhuapl.edu">John Hopkins University Applied Physics Labratory</a><br />
+<img src="" id="trajectory" width="49%" alt="Image Loading..."/>
+<img src="" id="sideview" width="49%" alt="Image Loading..."/><br />
+<img src=" http://pluto.jhuapl.edu/Multimedia/Science-Photos/pics/pluto_moons_family_portrait.jpg" width="49%"/>
+<img src=" http://pluto.jhuapl.edu/Mission/Spacecraft/images/Payload-FULL.jpg" width="49%" />
+<img src=" http://pluto.jhuapl.edu/Mission/The-Path-to-Pluto/images/launch_vehicle.jpg" />
+<img src=" http://pluto.jhuapl.edu/Mission/The-Path-to-Pluto/images/Mission-PathtoPluto-MissionTimeline-TenYears_sm.jpg" width="100%" />
+<img src=" http://pluto.jhuapl.edu/Mission/The-Path-to-Pluto/images/NHPlutoEncounterTrajectory_NomV8_Guo20150615.png" width="100%" />
+New Horizons Launch Video<br />
+<video width="640px" height="360px" controls>
+<source src="launch.mp4" type="video/mp4">
+Your browser does not support html 5 video
+</video>
+<script>
+var now = new Date();
+var year = now.getFullYear();
+var month = now.getMonth();
+var filemonth= month + 1;
+var hourssincemonth= hourssincemonth(now, month);
+if (hourssincemonth < 100) {
+    hourssincemonth = "0"+hourssincemonth;
+}
+var filename="nhov"+year+"0"+filemonth+"01_0"+hourssincemonth+".svg";
+alert (filename);
+document.getElementById("trajectory").src="http://pluto.jhuapl.edu/whereisnh/overview/"+filename;
+filename = "nhpf"+year+"0"+filemonth+"01_0"+hourssincemonth+".svg";
+document.getElementById ("sideview").src="http://pluto.jhuapl.edu/whereisnh/PlutoFlyby/"+filename;
+function hourssincemonth(now, month) {
+var day= now.getDate();
+var dayminus1 = day - 1;
+var hoursuntilyesterday = dayminus1 * 24;
+var hourstoday = now.getHours();
+return hoursuntilyesterday + hourstoday;
+}
+</script>
+</body>
+</html>
