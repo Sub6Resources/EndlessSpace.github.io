@@ -1,0 +1,19 @@
+body {
+  background-color:black;
+  color:white;
+}
+td {
+  padding:25px;
+  width:25%;
+  margin:0;
+  border:1px solid #333;
+  background-color:rgba(0,100,0,100);
+}
+td.disabled {
+  background-color:#333;
+}
+table {
+  text-align:center;
+  width:90%;
+}
+
