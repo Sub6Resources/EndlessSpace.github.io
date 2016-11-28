@@ -49,10 +49,15 @@ var hourssincemonth= hourssincemonth(now, month);
 if (hourssincemonth < 100) {
     hourssincemonth = "0"+hourssincemonth;
 }
-var filename="nhov"+year+"0"+filemonth+"01_0"+hourssincemonth+".svg";
+if(filemonth > 9) {
+    //Do nothing
+} else {
+    filemonth = "0"+filemonth;
+}
+var filename="nhov"+year+filemonth+"01_0"+hourssincemonth+".svg";
 alert (filename);
 document.getElementById("trajectory").src="http://pluto.jhuapl.edu/whereisnh/overview/"+filename;
-filename = "nhpf"+year+"0"+filemonth+"01_0"+hourssincemonth+".svg";
+filename = "nhpf"+year+filemonth+"01_0"+hourssincemonth+".svg";
 document.getElementById ("sideview").src="http://pluto.jhuapl.edu/whereisnh/PlutoFlyby/"+filename;
 function hourssincemonth(now, month) {
 var day= now.getDate();
