@@ -11,7 +11,7 @@
 </div>
 <div id="list">
   <form>
-    <input type="text" hint="Enter your query here">
+    <input type="text" id="entry" placeholder="Enter your query here">
     <input type="submit" value="Go">
   </form>
 </div>
@@ -61,9 +61,12 @@ margin:auto;
 }
   #list{
     position:fixed;
-    left:50%;
+    left:30%;
     top:50%;
   }
+  #entry {
+    width:120px;
+    }
   input {
     border:none;
     padding:12px;
