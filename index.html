@@ -93,7 +93,7 @@ margin:auto;
     }
     //get the 'index' query parameter
     console.log(GET['q']);
-    if(GET['q'] != "" && GET['q'] != null) {
+    if(GET['q'] != "" && GET['q'] != null && GET['q'] !== undefined) {
       console.log("Switching to results display");
     }
 
