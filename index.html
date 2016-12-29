@@ -74,5 +74,29 @@ margin:auto;
     }
 </style>
 <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+  <script type="text/javascript">
+    console.log("Script starting...");
+    
+
+    var $_GET = {};
+    if(document.location.toString().indexOf('?') !== -1) {
+        var query = document.location
+                       .toString()
+                       // get the query string
+                       .replace(/^.*?\?/, '')
+                       // and remove any existing hash string (thanks, @vrijdenker)
+                       .replace(/#.*$/, '')
+                       .split('&');
+
+        for(var i=0, l=query.length; i<l; i++) {
+           var aux = decodeURIComponent(query[i]).split('=');
+           $_GET[aux[0]] = aux[1];
+        }
+    }
+    //get the 'index' query parameter
+    alert($_GET['q']);
+
+
+  </script>
 </body>
 </html>
