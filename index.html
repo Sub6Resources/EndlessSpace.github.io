@@ -18,7 +18,12 @@
     </div>
   </div>
   <div id="results">
-    
+    <div id="navbar">
+      EndlessSpace---<form><input type="text" id="entry" placeholder="Enter your query here" name="q"><input type="submit" value="Go"></form>
+    </div>
+    <div id="inner_results">
+      THESE ARE THE PLACEHOLDER RESULTS. NOT ACTUALLY RESULTS OF THE QUERY
+    </div>
     <div id="foot">
       &copy; Sub 6 Resources 2016
     </div>
@@ -105,7 +110,6 @@
            GET[aux[0]] = aux[1];
         }
     }
-    //get the 'index' query parameter
     console.log(GET['q']);
     if(GET['q'] != "" && GET['q'] != null && GET['q'] !== undefined) {
       console.log("Switching to results display");
@@ -113,6 +117,8 @@
     }
     
     function switchToResults(searchQuery) {
+      document.getElementById("entry").value = searchQuery;
+      //Display the elements
       document.getElementById("container").style.display = "none";
       document.getElementById("results").style.display = "block";
       console.log("Switched to results display with search query "+searchQuery);
