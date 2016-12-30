@@ -5,13 +5,13 @@ function getResults(searchQuery) {
       //SHOW ME THE SUN-------------------------------------------------------------------------------------------------
     case "show me the sun":
       resultDiv.innerHTML = getImageResultString("Here is an image of the sun right now, constructed by compiling the two STEREO spacecraft's images of the sun with the image of the sun from the Earth. <br />The animation starts at 0&deg; (What we can see from Earth right now), and rotates to show the sun from different angles.", "https://stereo.gsfc.nasa.gov/beacon/euvi_195_rotated.gif");
-      if(compareTwoImages("https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/ahead_euvi_304_latest.jpg","")) {
-      resultDiv.innerHTML += getImageResultString("Here is a visible light image of the sun as seen from the STEREO Ahead satellite. <br />It was last updated at the date and time noted on the bottom of the image.", "https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/ahead_euvi_304_latest.jpg");
+      if(compareTwoImages("https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/ahead_euvi_304_latest.jpg","https://endlessspace.github.io/data/nodatastereo.jpg")) {
+      resultDiv.innerHTML += getImageResultString("Here is a visible light image of the sun as seen from the STEREO Ahead satellite. <br />It was last updated at the date and time noted on the bottom of the image.<br />This spacecraft has not recently sent data, so the image says 'No Data'", "https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/ahead_euvi_304_latest.jpg");
       } else {
         resultDiv.innerHTML += getImageResultString("Here is a visible light image of the sun as seen from the STEREO Ahead satellite. <br />It was last updated at the date and time noted on the bottom of the image.", "https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/ahead_euvi_304_latest.jpg");
       }
-      if(compareTwoImages("https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/behind_euvi_304_latest.jpg","")) {
-      resultDiv.innerHTML += getImageResultString("Here is a visible light image of the sun as seen from the STEREO Behind satellite. <br />It was last updated at the date and time noted on the bottom of the image.", "https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/behind_euvi_304_latest.jpg");
+      if(compareTwoImages("https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/behind_euvi_304_latest.jpg","https://endlessspace.github.io/data/nodatastereo.jpg")) {
+      resultDiv.innerHTML += getImageResultString("Here is a visible light image of the sun as seen from the STEREO Behind satellite. <br />It was last updated at the date and time noted on the bottom of the image.<br />This spacecraft has not recently sent data, so the image says 'No Data' <a href='https://endlessspace.github.io/stereo/#loss' target='_blank'>Why does STEREO Behind never show data?</a>", "https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/behind_euvi_304_latest.jpg");
       } else {
         resultDiv.innerHTML += getImageResultString("Here is a visible light image of the sun as seen from the STEREO Behind satellite. <br />It was last updated at the date and time noted on the bottom of the image.", "https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/behind_euvi_304_latest.jpg");
       }
