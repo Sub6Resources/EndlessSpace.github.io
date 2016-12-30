@@ -17,7 +17,7 @@ function getResults(searchQuery) {
       }
       break;
     case "stereo":
-      resultDiv.innerHTML = getImageResultString("Here are the current positions of the STEREO Ahead and Behind spacecraft<br />Note that the position is relative to Mercury, Venus, and the Earth", "https://stereo-ssc.nascom.nasa.gov/where/where_is_stereo.gif");
+      resultDiv.innerHTML = getFullSizeImageResultString("Here are the current positions of the STEREO Ahead and Behind spacecraft<br />Note that the position is relative to Mercury, Venus, and the Earth", "https://stereo-ssc.nascom.nasa.gov/where/where_is_stereo.gif");
       break;
     default:
       resultDiv.innerHTML = getTextResultString('No live data found on this site for "'+searchQuery+'"');
@@ -33,6 +33,9 @@ function getTextResultString(resultText) {
 }
 function getTextBoldResultString(resultText, boldText) {
   return '<div class="result"><span class="result-header">'+boldText+'</span><br /><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
+}
+function getFullSizeImageResultString(resultText, resultImageURL) {
+  return '<div class="result"><img class="result-image-full-size" src="'+resultImageURL+'" alt="Image Loading..." width="50%"/><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
 }
 function compareTwoImages(url1, url2) {
   var a = new Image(),
