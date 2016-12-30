@@ -186,10 +186,10 @@
       document.getElementById("container").style.display = "none";
       document.getElementById("results").style.display = "block";
       //Find results
-      document.getElementById("entry").value = decodeURIComponent(searchQuery).replace(/+/g, " ");
+      document.getElementById("entry").value = decodeURIComponent(searchQuery).replace(/\+/g, " ");
       console.log("Switched element 'entry' to "+document.getElementById("entry").value);
-      console.log("Switched to results display with search query "+decodeURIComponent(searchQuery).replace(/+/g, " "));
-      getResults(decodeURIComponent(searchQuery).replace(/+/g, " "));
+      console.log("Switched to results display with search query "+decodeURIComponent(searchQuery).replace(/\+/g, " "));
+      getResults(decodeURIComponent(searchQuery).replace(/\+/g, " "));
     }
   </script>
 </body>
