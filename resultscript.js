@@ -70,7 +70,11 @@ function getBase64Image(img) {
     // Firefox supports PNG and JPEG. You could check img.src to
     // guess the original format, but be aware the using "image/jpg"
     // will re-encode the image.
+  try {
     var dataURL = canvas.toDataURL("image/png");
+  } catch(exception) {
+    return exception;
+  }
 
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 }
