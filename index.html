@@ -180,10 +180,13 @@
     }
     
     function switchToResults(searchQuery) {
-      document.getElementById("entry").value = searchQuery;
+      
       //Display the elements
       document.getElementById("container").style.display = "none";
       document.getElementById("results").style.display = "block";
+      //Find results
+      document.getElementById("entry").value = searchQuery;
+      console.log("Switched element 'entry' to "+document.getElementById("entry").value);
       console.log("Switched to results display with search query "+searchQuery);
     }
   </script>
