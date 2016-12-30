@@ -156,6 +156,7 @@
     }
   </style>
   <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="resultscript.js"></script>
   <script type="text/javascript">
     console.log("Script starting...");
     
@@ -188,6 +189,7 @@
       document.getElementById("entry").value = searchQuery;
       console.log("Switched element 'entry' to "+document.getElementById("entry").value);
       console.log("Switched to results display with search query "+searchQuery);
+      getResults(searchQuery);
     }
   </script>
 </body>
