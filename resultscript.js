@@ -16,6 +16,9 @@ function getResults(searchQuery) {
         resultDiv.innerHTML += getImageResultString("Here is a visible light image of the sun as seen from the STEREO Behind satellite. <br />It was last updated at the date and time noted on the bottom of the image.", "https://stereo-ssc.nascom.nasa.gov/beacon/latest_256/behind_euvi_304_latest.jpg");
       }
       break;
+    case "stereo":
+      resultDiv.innerHTML = getImageResultString("Here are the current positions of the STEREO Ahead and Behind spacecraft<br />Note that the position is relative to Mercury, Venus, and the Earth", "https://stereo-ssc.nascom.nasa.gov/where/where_is_stereo.gif");
+      break;
     default:
       resultDiv.innerHTML = getTextResultString('No live data found on this site for "'+searchQuery+'"');
       break;
