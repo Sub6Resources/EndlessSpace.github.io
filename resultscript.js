@@ -73,6 +73,7 @@ function getBase64Image(img) {
   try {
     var dataURL = canvas.toDataURL("image/png");
   } catch(exception) {
+    console.log("Image compare exception: "+exception);
     return exception;
   }
 
