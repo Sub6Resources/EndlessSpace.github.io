@@ -19,5 +19,5 @@ function getTextResultString(resultText) {
   return '<div class="result"><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
 }
 function getTextBoldResultString(resultText, boldText) {
-  return '<div class="result"><span class="result-header">+'boldText'+</span><br /><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
+  return '<div class="result"><span class="result-header">'+boldText+'</span><br /><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
 }
