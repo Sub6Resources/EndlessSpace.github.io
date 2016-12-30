@@ -13,7 +13,7 @@ function getResults(searchQuery) {
 }
 
 function getImageResultString(resultText, resultImageURL) {
-  return '<div class="result"><img class="result-image" src="'+resultImageURL+'" alt="result image" width="50%"/><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
+  return '<div class="result"><img class="result-image" src="'+resultImageURL+'" alt="Image Loading..." width="50%"/><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
 }
 function getTextResultString(resultText) {
   return '<div class="result"><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
