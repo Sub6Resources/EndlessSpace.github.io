@@ -25,6 +25,10 @@ function getResults(searchQuery) {
       resultDiv.innerHTML = getTextBoldResultString("There are several options for finding data on this site. You can either search for a satellite or other data (ex. Search 'STEREO'). Or try searching for images of a certain planet or object. (ex. Search 'Show me the sun').", "Help");
       break;
     default:
+      var o = $Spelling.AjaxSpellCheck(searchQuery);
+      o.onSpellCheck = function(result,suggestions){
+        alert("SpellChecking Result: "result)
+      }
       resultDiv.innerHTML = getTextResultString('No live data found on this site for "'+searchQuery+'"');
       break;
                     }
