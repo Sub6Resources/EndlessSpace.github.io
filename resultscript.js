@@ -1,4 +1,4 @@
-//Copyright (c) Matthew Whitaker 2016
+//Copyright (c) Matthew Whitaker 2017
 function getResults(searchQuery) {
   var resultDiv = document.getElementById("inner_results");
   switch(searchQuery.replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"").toLowerCase()) {
