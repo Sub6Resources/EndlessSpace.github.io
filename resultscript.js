@@ -31,7 +31,7 @@ function getResults(searchQuery) {
 }
 
 function getImageResultString(resultText, resultImageURL) {
-  return '<div class="result"><img class="result-image" src="'+resultImageURL+'" alt="Image Loading..."/><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
+  return '<div class="result"><img class="result-image imgview" src="'+resultImageURL+'" alt="Image Loading..."/><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
 }
 function getTextResultString(resultText) {
   return '<div class="result"><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
@@ -40,7 +40,7 @@ function getTextBoldResultString(resultText, boldText) {
   return '<div class="result"><span class="result-header">'+boldText+'</span><br /><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
 }
 function getFullSizeImageResultString(resultText, resultImageURL) {
-  return '<div class="result"><img class="result-image-full-size" src="'+resultImageURL+'" alt="Image Loading..."/><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
+  return '<div class="result"><img class="result-image-full-size imgview" src="'+resultImageURL+'" alt="Image Loading..."/><span class="result-text">'+resultText+'</span><div style="clear:both;"></div></div>';
 }
 function compareTwoImages(url1, url2) {
   var a = new Image(),
